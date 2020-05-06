@@ -19,13 +19,23 @@ export default class App extends React.Component {
       .get(this.state.url)
       .then(res => {
 
-        console.log(res.data)
-        this.setState({ user: res.data });
+        console.log(res.data);
+
+        axios
+          .get(res.data.followers_url)
+          .then(res1 => {
+            console.log(res1.data);
+
+            this.setState({ user: res.data, followers: res1.data });
+          });
+
+
 
 
       })
 
       .catch(err => console.log(err));
+
 
   }
 
@@ -47,7 +57,7 @@ export default class App extends React.Component {
 
         />
 
-        <h2>My Followers</h2>
+        <h1>My Followers</h1>
 
         {
 

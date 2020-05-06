@@ -1,5 +1,8 @@
+
 .App {
   text-align: center;
+  
+
 }
 
 .App-logo {
@@ -37,31 +40,41 @@
   }
 }
 
-
-
+@font-face {
+  font-family: 'Terminator Real NFI';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Terminator Real NFI'), url("terminator\ real\ nfi.woff") format('woff');
+  }
 
 .userCard{
 
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   padding: 5% 0;
-  background-color: firebrick;
+  background-image: linear-gradient(rgba(241, 243, 252, 0.8),rgb(0, 5, 32) );
   color: white;
-  border: 2px solid black;
+  border: 3px solid black;
+  margin-bottom: 3%;
 
 }
 
 
-h2{
-  font-size: 2rem;
+h1 {
+    font-family: 'Terminator Real NFI';
+font-family:"Terminator Real NFI";
+  font-size: 2.5rem;
+  color: white;
+  letter-spacing: 0.5rem;
 }
 
 img{
-  border: 1px solid black;
+  border: 3px solid white;
+  width: 40%;
 }
 
 .userInfo{
-  width: 30%;
+  width: 40%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -72,10 +85,15 @@ img{
 .key{
  font-weight: 600;
  font-size: 1.2rem;
- font-style: italic;
+
 }
 
 p{
+
   display: flex;
   justify-content:space-between;
+}
+
+.value{
+  font-style: italic;
 }
