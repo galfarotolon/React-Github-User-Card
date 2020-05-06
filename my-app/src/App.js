@@ -55,7 +55,7 @@ export default class App extends React.Component {
           userName={this.state.user.login}
           followers={this.state.user.followers}
           following={this.state.user.following}
-          userUrl={this.state.user.url}
+          userUrl={this.state.user.html_url}
 
         />
 
