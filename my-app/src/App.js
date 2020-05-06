@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import axios from "axios";
 import UserCard from "./UserCard"
+import FollowerCard from "./FollowerCard"
 
 export default class App extends React.Component {
   constructor() {
@@ -54,6 +55,7 @@ export default class App extends React.Component {
           userName={this.state.user.login}
           followers={this.state.user.followers}
           following={this.state.user.following}
+          userUrl={this.state.user.url}
 
         />
 
@@ -62,12 +64,12 @@ export default class App extends React.Component {
         {
 
           this.state.followers.map(user => {
-            return <UserCard
-              name={user.name}
+            return <FollowerCard
+
               userImg={user.avatar_url}
               userName={user.login}
-              followers={user.followers}
-              following={user.following}
+              userUrl={user.html_url}
+
 
             />
 
